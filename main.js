@@ -1,3 +1,4 @@
+const API_PATH = 'https://api.themoviedb.org/3'
 const ImageURL = 'https://image.tmdb.org/t/p/original'
 const API_KEY = '835e14c83deaad70730e723e333fe11c'
 
@@ -7,7 +8,7 @@ let Page = 1;
 let Peliculas;
 
 function CargarPeliculas(){
-  fetch(`https://api.themoviedb.org/3/discover/movie/?api_key=${API_KEY}&page=${Page}`)
+  fetch(`${API_PATH}/discover/movie/?api_key=${API_KEY}&page=${Page}`)
   .then(response => response.json())
     .then(function(data){
       AgregarPeliculas(data.results)

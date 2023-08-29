@@ -1,4 +1,4 @@
-const API_PATH = 'https://api.themoviedb.org/3'
+const API_PATH = '//api.themoviedb.org/3'
 const ImageURL = 'https://image.tmdb.org/t/p/original'
 const API_KEY = '835e14c83deaad70730e723e333fe11c'
 

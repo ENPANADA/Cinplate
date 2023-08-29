@@ -1,5 +1,5 @@
 const API_PATH = '//api.themoviedb.org/3'
-const ImageURL = 'https://image.tmdb.org/t/p/original'
+const ImageURL = '//image.tmdb.org/t/p/original'
 const API_KEY = '835e14c83deaad70730e723e333fe11c'
 
 let html = "";
@@ -12,7 +12,8 @@ function CargarPeliculas(){
   .then(response => response.json())
     .then(function(data){
       AgregarPeliculas(data.results)
-    });
+    })
+    .catch(error => console.log('Error: ',error));
 }
 
 function AgregarPeliculas(data){
